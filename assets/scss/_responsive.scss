@@ -1,0 +1,185 @@
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  @include navbar-mixin-min-sm();
+  @include footer-mixin-min-sm();
+  @include homePage-mixin-min-sm();
+  @include headings-mixin-min-sm();
+  @include companyPage-mixin-min-sm();
+  @include galleryPage-mixin-min-sm();
+  @include newsPage-mixin-min-sm();
+  @include globally-mixin-min-sm();
+  @include branchesPage-mixin-min-sm();
+  @include downloadPage-mixin-min-sm();
+  @include careerPage-mixin-min-sm();
+  @include contactUsPage-mixin-min-sm();
+  @include loginPage-mixin-min-sm();
+  @include productPage-mixin-min-sm();
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  @include navbar-mixin-min-md();
+  @include footer-mixin-min-md();
+  @include homePage-mixin-min-md();
+  @include headings-mixin-min-md();
+  @include companyPage-mixin-min-md();
+  @include galleryPage-mixin-min-md();
+  @include newsPage-mixin-min-md();
+  @include globally-mixin-min-md();
+  @include branchesPage-mixin-min-md();
+  @include downloadPage-mixin-min-md();
+  @include careerPage-mixin-min-md();
+  @include contactUsPage-mixin-min-md();
+  @include loginPage-mixin-min-md();
+  @include productPage-mixin-min-md();
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  @include navbar-mixin-min-lg();
+  @include footer-mixin-min-lg();
+  @include homePage-mixin-min-lg();
+  @include headings-mixin-min-lg();
+  @include companyPage-mixin-min-lg();
+  @include galleryPage-mixin-min-lg();
+  @include newsPage-mixin-min-lg();
+  @include globally-mixin-min-lg();
+  @include branchesPage-mixin-min-lg();
+  @include downloadPage-mixin-min-lg();
+  @include careerPage-mixin-min-lg();
+  @include contactUsPage-mixin-min-lg();
+  @include loginPage-mixin-min-lg();
+  @include productPage-mixin-min-lg();
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  @include navbar-mixin-min-xl();
+  @include footer-mixin-min-xl();
+  @include homePage-mixin-min-xl();
+  @include headings-mixin-min-xl();
+  @include companyPage-mixin-min-xl();
+  @include galleryPage-mixin-min-xl();
+  @include newsPage-mixin-min-xl();
+  @include globally-mixin-min-xl();
+  @include branchesPage-mixin-min-xl();
+  @include downloadPage-mixin-min-xl();
+  @include careerPage-mixin-min-xl();
+  @include contactUsPage-mixin-min-xl();
+  @include loginPage-mixin-min-xl();
+  @include productPage-mixin-min-xl();
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+  @include navbar-mixin-min-xxl();
+  @include footer-mixin-min-xxl();
+  @include homePage-mixin-min-xxl();
+  @include headings-mixin-min-xxl();
+  @include companyPage-mixin-min-xxl();
+  @include galleryPage-mixin-min-xxl();
+  @include newsPage-mixin-min-xxl();
+  @include globally-mixin-min-xxl();
+  @include branchesPage-mixin-min-xxl();
+  @include downloadPage-mixin-min-xxl();
+  @include careerPage-mixin-min-xxl();
+  @include contactUsPage-mixin-min-xxl();
+  @include loginPage-mixin-min-xxl();
+  @include productPage-mixin-min-xxl();
+}
+
+// X-Large devices (large desktops, less than 1400px)
+@media (max-width: 1399.98px) {
+  @include navbar-mixin-max-xl();
+  @include footer-mixin-max-xl();
+  @include homePage-mixin-max-xl();
+  @include headings-mixin-max-xl();
+  @include companyPage-mixin-max-xl();
+  @include galleryPage-mixin-max-xl();
+  @include newsPage-mixin-max-xl();
+  @include globally-mixin-max-xl();
+  @include branchesPage-mixin-max-xl();
+  @include downloadPage-mixin-max-xl();
+  @include careerPage-mixin-max-xl();
+  @include contactUsPage-mixin-max-xl();
+  @include loginPage-mixin-max-xl();
+  @include productPage-mixin-max-xl();
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+  @include navbar-mixin-max-lg();
+  @include footer-mixin-max-lg();
+  @include homePage-mixin-max-lg();
+  @include headings-mixin-max-lg();
+  @include companyPage-mixin-max-lg();
+  @include galleryPage-mixin-max-lg();
+  @include newsPage-mixin-max-lg();
+  @include globally-mixin-max-lg();
+  @include branchesPage-mixin-max-lg();
+  @include downloadPage-mixin-max-lg();
+  @include careerPage-mixin-max-lg();
+  @include contactUsPage-mixin-max-lg();
+  @include loginPage-mixin-max-lg();
+  @include productPage-mixin-max-lg();
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+  @include navbar-mixin-max-md();
+  @include footer-mixin-max-md();
+  @include homePage-mixin-max-md();
+  @include headings-mixin-max-md();
+  @include companyPage-mixin-max-md();
+  @include galleryPage-mixin-max-md();
+  @include newsPage-mixin-max-md();
+  @include globally-mixin-max-md();
+  @include branchesPage-mixin-max-md();
+  @include downloadPage-mixin-max-md();
+  @include careerPage-mixin-max-md();
+  @include contactUsPage-mixin-max-md();
+  @include loginPage-mixin-max-md();
+  @include productPage-mixin-max-md();
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+  @include navbar-mixin-max-sm();
+  @include footer-mixin-max-sm();
+  @include homePage-mixin-max-sm();
+  @include headings-mixin-max-sm();
+  @include companyPage-mixin-max-sm();
+  @include galleryPage-mixin-max-sm();
+  @include newsPage-mixin-max-sm();
+  @include globally-mixin-max-sm();
+  @include branchesPage-mixin-max-sm();
+  @include downloadPage-mixin-max-sm();
+  @include careerPage-mixin-max-sm();
+  @include contactUsPage-mixin-max-sm();
+  @include loginPage-mixin-max-sm();
+  @include productPage-mixin-max-sm();
+}
+
+// X-Small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  @include navbar-mixin-max-xs();
+  @include footer-mixin-max-xs();
+  @include homePage-mixin-max-xs();
+  @include headings-mixin-max-xs();
+  @include companyPage-mixin-max-xs();
+  @include galleryPage-mixin-max-xs();
+  @include newsPage-mixin-max-xs();
+  @include globally-mixin-max-xs();
+  @include branchesPage-mixin-max-xs();
+  @include downloadPage-mixin-max-xs();
+  @include careerPage-mixin-max-xs();
+  @include contactUsPage-mixin-max-xs();
+  @include loginPage-mixin-max-xs();
+  @include productPage-mixin-max-xs();
+}
+
+// XX-Large devices (larger desktops)
+// No media query since the xxl breakpoint has no upper bound on its width

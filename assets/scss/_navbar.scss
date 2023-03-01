@@ -1,0 +1,390 @@
+.navbar {
+    height: 80px;
+    transition: ease-in-out .3s;
+    z-index: 999;
+    background: rgba($dark, .2);
+    & .navbar-brand {
+        width: 130px;
+        & img {
+
+        }
+    }
+    & .navbar-toggler {
+        & .navbar-toggler-icon {
+
+        }
+    }
+    & .navbar-collapse {
+        & .navbar-nav {
+            & .nav-item {
+                & .nav-link {
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: $white;
+                    text-transform: uppercase;
+                    position: relative;
+                    letter-spacing: 1px;
+                    transition: ease-in-out .3s;
+
+                    &:after {
+                        content: '';
+                        display: block;
+                        width: 0;
+                        border-top: 2px solid $theme1;
+                        margin: 6px auto 0;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        transition: ease-in-out .3s;
+                    }
+                    &.active, &:hover {
+                        color: $theme1;
+                        &:after {
+                            width: 100%;
+                        }
+                    }
+                }
+                &.dropdown{
+                    & .nav-link {
+                        padding-right: 16px;
+                        &:before {
+                            display: block;
+                            content: "";
+                            border-top: 0.3em solid;
+                            border-right: 0.3em solid rgba(0,0,0,0);
+                            border-bottom: 0;
+                            position: absolute;
+                            right: 5px;
+                            top: 16px;
+                            border-left: 0.3em solid rgba(0,0,0,0);
+                        }
+                    }
+                    & .dropdown-menu {
+                        min-width: 15rem;
+                        & .dropdown-item{
+                            font-size: 13px;
+                            padding: 6px 16px;
+                            outline: none;
+                            display: flex;
+                            align-items: center;
+                            transition: ease-in-out .3s;
+                            gap: 6px;
+                            &:hover, &:active {
+                                color: $theme1;
+                                letter-spacing: 1px;
+                            }
+                            &:active {
+                                background: var(--bs-dropdown-link-hover-bg);
+                                color: $theme1;
+                            }
+                        }
+                    }
+                    &.brands {
+                        & .dropdown-menu {
+                            & .dropdown-item {
+                                &::before {
+                                    content: none;
+                                }
+                                & img {
+                                    width: 100px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.nav-active {
+        height: 60px;
+        background-color: $gray-100;
+        & .navbar-collapse {
+            & .navbar-nav {
+                & .nav-item {
+                    & .nav-link {
+                        color: $dark;
+                        &:after {
+                        }
+                        &.active, &:hover {
+                            color: $theme1;
+                            &:after {
+                            }
+                        }
+                    }
+                    &.dropdown{
+                        & .nav-link {
+                            &:before {
+                            }
+                        }
+                        & .dropdown-menu {
+                            & .dropdown-item{
+                                &:before {
+                                }
+                                &:hover, &:active {
+                                    &:before {
+                                    }
+                                }
+                                &:active {
+                                    &:before {
+                                    }
+                                }
+                            }
+                        }
+                        &.brands {
+                            & .dropdown-menu {
+                                & .dropdown-item {
+                                    &::before {
+                                        content: none;
+                                    }
+                                    & img {
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.offcanvas {
+    &.offcanvas-start{
+        &.mobileHeader {
+            & .offcanvas-header {
+               & .offcanvas-title{
+                   width: 120px;
+               }
+               & .btn-close{
+                   font-size: 12px;
+               }
+            }
+            & .offcanvas-body {
+                & .mobileMenu {
+                    & .navbar-nav {
+                        & .nav-item {
+                            & .nav-link {
+                                font-size: 12px;
+                                font-weight: 500;
+                                color: $dark;
+                                text-transform: uppercase;
+                                position: relative;
+                                letter-spacing: 1px;
+                                transition: ease-in-out .3s;
+                                padding-right: 16px;
+                                display: flex;
+                                align-items: center;
+                                gap: 5px;
+                                &:before {
+                                    content: '';
+                                    display: block;
+                                    width: 3px;
+                                    height: 3px;
+                                    border-radius: 50px;
+                                    background-color: $theme1;
+                                    transition: ease-in-out .3s;
+                                }
+                                &[data-bs-toggle=collapse]{
+                                    &:after {
+                                    content: '';
+                                    display: block;
+                                    width: 8px;
+                                    height: 8px;
+                                    border: 2px solid transparent;
+                                    border-left: 2px solid $gray-600;
+                                    border-bottom: 2px solid $gray-600;
+                                    transform: rotate(-45deg);
+                                    position: absolute;
+                                    right: 5px;
+                                    transition: ease-in-out .3s;
+                                    }
+                                }
+                                &.active {
+                                    &:after {
+                                        border-top: 2px solid $gray-600 !important;
+                                        border-right: 2px solid $gray-600 !important;
+                                        border-color: transparent;
+                                    }
+                                }
+                                &.active, &:hover {
+                                    color: $theme1;
+                                    &:before {
+                                        width: 15px;
+                                    }
+                                }
+                            }
+                            & .collapseOuter {
+                                & .collapseItem {
+                                    font-size: 12px;
+                                    color: $dark;
+                                    padding: 6px 16px;
+                                    transition: ease-in-out .3s;
+                                    &.active, &:hover, &:active {
+                                        color: $theme1;
+                                        letter-spacing: 1px;
+                                    }
+                                }
+                            }
+                            &.brands {
+                                & .collapseOuter {
+                                    & .collapseItem {
+                                        & img {
+                                            width: 100px;
+                                        }
+                                    }
+                                }
+                            }
+                            }    
+                    //    }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Small devices (landscape phones, 576px and up)
+@mixin navbar-mixin-min-sm() {
+}
+
+// Medium devices (tablets, 768px and up)
+@mixin navbar-mixin-min-md() {
+}
+
+// Large devices (desktops, 992px and up)
+@mixin navbar-mixin-min-lg() {
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@mixin navbar-mixin-min-xl() {
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin navbar-mixin-min-xxl() {
+}
+
+// X-Small devices (portrait phones, less than 576px)
+@mixin navbar-mixin-max-xs() {
+}
+
+// Small devices (landscape phones, less than 768px)
+@mixin navbar-mixin-max-sm() {
+    .navbar {
+        height: 60px;
+        transition: ease-in-out .3s;
+        & .navbar-brand {
+            width: 100px;
+            & img {
+    
+            }
+        }
+        & .navbar-toggler {
+            & .navbar-toggler-icon {
+    
+            }
+        }
+        & .navbar-collapse {
+            & .navbar-nav {
+                & .nav-item {
+                    & .nav-link {
+                        &:after {
+                        }
+                        &.active, &:hover {
+                            &:after {
+                            }
+                        }
+                    }
+                    &.dropdown{
+                        & .nav-link {
+                            &:before {
+                            }
+                        }
+                        & .dropdown-menu {
+                            & .dropdown-item{
+                                &:hover, &:active {
+                                }
+                                &:active {
+                                }
+                            }
+                        }
+                        &.brands {
+                            & .dropdown-menu {
+                                & .dropdown-item {
+                                    & img {
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.nav-active {
+            height: 60px;
+        }
+    }
+}
+
+// Medium devices (tablets, less than 992px)
+@mixin navbar-mixin-max-md() {
+    .navbar {
+        height: 60px;
+        & .navbar-brand {
+            & img {
+    
+            }
+        }
+        & .navbar-toggler {
+            & .navbar-toggler-icon {
+    
+            }
+        }
+        & .navbar-collapse {
+            & .navbar-nav {
+                & .nav-item {
+                    & .nav-link {
+                        &:after {
+                        }
+                        &.active, &:hover {
+                            &:after {
+                            }
+                        }
+                    }
+                    &.dropdown{
+                        & .nav-link {
+                            &:before {
+                            }
+                        }
+                        & .dropdown-menu {
+                            & .dropdown-item{
+                                &:hover, &:active {
+                                }
+                                &:active {
+                                }
+                            }
+                        }
+                        &.brands {
+                            & .dropdown-menu {
+                                & .dropdown-item {
+                                    & img {
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.nav-active {
+        }
+    }
+}
+
+// Large devices (desktops, less than 1200px)
+@mixin navbar-mixin-max-lg() {
+}
+
+// X-Large devices (large desktops, less than 1400px)
+@mixin navbar-mixin-max-xl() {
+}

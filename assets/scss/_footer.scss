@@ -1,0 +1,311 @@
+[page-name=footer] {
+    &.footer {
+        & .footer-dec {
+            width: 100%;
+            position: absolute;
+            z-index: -1;
+            & img {
+                width: 100%;
+                overflow: hidden;
+            }
+        }
+        & .footerLinksOuter {
+            padding: 80px 12px;
+            & .footer-item{
+                & .linksTitle {
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: $gray-900;
+                    margin-bottom: 30px;
+                }
+                & .links {
+                    & li {
+                        & .footerLink {
+                            font-size: 14px;
+                            color: $gray-500;
+                            transition: all .3s;
+                            &:before {
+                                content: '';
+                                width: 0;
+                                height: 2px;
+                                background-color: $theme1;
+                                display: block;
+                                transition: ease-in-out .3s;
+                            }
+                            &:hover, &.active, &:active {
+                                color: $theme1;
+                                &:before {
+                                    width: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            & .about {
+                & .logo {
+                    & a {
+                        width: 120px;
+                        margin-bottom: 30px;
+                    }
+                }
+                & .link {
+                    color: $gray-500;
+                    font-weight: 300;
+                    font-size: 14px;
+                }
+                & ul {
+                    margin-top: 20px;
+                    & li {
+                        margin: 0;
+                        & a {
+                            width: 32px;
+                            height: 32px;
+                            background-color: $theme2;
+                            color: $white !important;
+                            border-radius: 50%;
+                            text-align: center;
+                            display: flex;
+                            justify-content: center;
+                            line-height: 32px;
+                            font-size: 15px;
+                            transition: ease-in-out .3s;
+                            &:hover {
+                                background-color: $theme1;
+                            }
+                        }
+                    }
+                }
+            }
+            & .services {
+            }
+        }
+        & .copyright {
+            & p {
+                text-align: center;
+                border-top: 1px solid $gray-300;
+                color: $gray-500;
+                padding: 20px 0px;
+                font-weight: 300;
+                font-size: 12px;
+                & a {
+                    color: $theme1;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@mixin footer-mixin-min-sm() {
+}
+
+// Medium devices (tablets, 768px and up)
+@mixin footer-mixin-min-md() {
+}
+
+// Large devices (desktops, 992px and up)
+@mixin footer-mixin-min-lg() {
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@mixin footer-mixin-min-xl() {
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin footer-mixin-min-xxl() {
+}
+
+// X-Small devices (portrait phones, less than 576px)
+@mixin footer-mixin-max-xs() {
+    [page-name=footer] {
+        &.footer {
+            & .footer-dec {
+                display: none;
+                & img {
+                }
+            }
+            & .footerLinksOuter {
+                & .footer-item{
+                    & .linksTitle {
+                        font-size: 14px;
+                    }
+                    & p {
+                    }
+                    & ul {
+                        & li {
+                            & a {
+                                &:hover {
+                                }
+                            }
+                        }
+                    }
+                    & form {
+                        & input {
+                        }
+                        & button {
+                        }
+                    }
+                }
+                & .about {
+                    & .logo {
+                        & a {
+                        }
+                    }
+                    & a {
+                    }
+                    & ul {
+                        & li {
+                            & a {
+                                &:hover {
+                                }
+                            }
+                        }
+                    }
+                }
+                & .services {
+                }
+            }
+            & .copyright {
+                & p {
+                    & a {
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Small devices (landscape phones, less than 768px)
+@mixin footer-mixin-max-sm() {
+    [page-name=footer] {
+        &.footer {
+            & .footer-dec {
+                & img {
+                }
+            }
+            & .footerLinksOuter {
+                padding: 50px 12px;
+                & .footer-item{
+                    & .linksTitle {
+                        font-size: 16px;
+                    }
+                    & p {
+                    }
+                    & .links  {
+                        & li {
+                            & .footerLink {
+                                font-size: 12px;
+                                &:hover {
+                                }
+                            }
+                        }
+                    }
+                    & form {
+                        & input {
+                        }
+                        & button {
+                        }
+                    }
+                }
+                & .about {
+                    & .logo {
+                        & a {
+                        }
+                    }
+                    & a {
+                    }
+                    & ul {
+                        & li {
+                            & a {
+                                &:hover {
+                                }
+                            }
+                        }
+                    }
+                }
+                & .services {
+                }
+            }
+            & .copyright {
+                & p {
+                    & a {
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Medium devices (tablets, less than 992px)
+@mixin footer-mixin-max-md() {
+    [page-name=footer] {
+        &.footer {
+            & .footer-dec {
+                height: 120px;
+                & img {
+                    height: 100%;
+                }
+            }
+            & .footerLinksOuter {
+                padding: 60px 12px;
+                & .footer-item{
+                    & .linksTitle {
+                        margin-bottom: 12px;
+                        font-size: 16px;
+                    }
+                    & p {
+                    }
+                    & ul {
+                        & li {
+                            & a {
+                                font-size: 12px;
+                                &:hover {
+                                }
+                            }
+                        }
+                    }
+                    & form {
+                        & input {
+                        }
+                        & button {
+                        }
+                    }
+                }
+                & .about {
+                    & .logo {
+                        & a {
+                        }
+                    }
+                    & a {
+                    }
+                    & ul {
+                        & li {
+                            & a {
+                                &:hover {
+                                }
+                            }
+                        }
+                    }
+                }
+                & .services {
+                }
+            }
+            & .copyright {
+                & p {
+                    & a {
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Large devices (desktops, less than 1200px)
+@mixin footer-mixin-max-lg() {
+}
+
+// X-Large devices (large desktops, less than 1400px)
+@mixin footer-mixin-max-xl() {
+}

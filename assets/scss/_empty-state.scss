@@ -1,0 +1,13 @@
+.emptyStateOuter {
+    & .emptyStateImg {
+        & img {
+        }
+    }
+    & .emptyStateTxt {
+        & .empttitle {
+        }
+        & .emptDec {
+            font-size: 12px;
+        }
+    }
+}

@@ -1,0 +1,201 @@
+
+.mainHeading {
+    font-size: 40px;
+    font-weight: 700;
+}
+.newWelcomeHeading{
+    font-size: 12px;
+}
+.cardHeadign {
+    font-size: 18px;
+    font-weight: 600;
+}
+.linksHeading {
+    font-size: 24px;
+    font-weight: bold;
+}
+.heading {
+    & .title {  
+        font-size: 40px;
+        font-weight: 700;
+        text-transform: uppercase;
+        &:after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 4px;
+            background-color: $theme1;
+            border-radius: 50px;
+        }
+    }
+    & .subHeading {
+        font-size: 16px;
+        color: $dark;
+    }
+}
+.innerPageBanner{
+    padding: 100px 0 40px;
+    background-image: linear-gradient(90deg, rgba($dark, 0.5) 30%, rgba($dark, 0.3) 100%), url(../img/bgImg/company-banner.jpg);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    &.products {
+        background-image: linear-gradient(90deg, rgba($dark, 0.5) 30%, rgba($dark, 0.3) 100%), url(../img/bgImg/aaurvedhaBg.png);
+        background-position: bottom;
+    }
+    & .mainHeading {
+        height: 20vh;
+        align-items: center;
+        display: flex;
+    }
+}
+.tabHeading {
+    & .title {
+    }
+    & .dec {
+        font-size: 14px;
+    }
+}
+// .miniTitle {
+//     font-size: 12px;
+// }
+// .mainTitle {
+//     font-size: 20px;
+// }
+
+
+// Small devices (landscape phones, 576px and up)
+@mixin headings-mixin-min-sm() {
+}
+
+// Medium devices (tablets, 768px and up)
+@mixin headings-mixin-min-md() {
+}
+
+// Large devices (desktops, 992px and up)
+@mixin headings-mixin-min-lg() {
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@mixin headings-mixin-min-xl() {
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin headings-mixin-min-xxl() {
+}
+
+// X-Small devices (portrait phones, less than 576px)
+@mixin headings-mixin-max-xs() {
+    .WelcomeHeading {
+        font-size: 12px;
+    }
+    .mainHeading {
+        font-size: 18px;
+    }
+    .newWelcomeHeading{
+        font-size: 10px;
+    }
+    .cardHeadign {
+        font-size: 14px;
+    }
+    .heading {
+        & .title {  
+            font-size: 18px;
+             &:after {
+                width: 24px;
+            }
+        }
+        & .subHeading {
+            font-size: 10px;
+        }
+    }
+    .innerPageBanner{
+    }
+    .tabHeading {
+        & .title {
+            font-size: 12px !important;
+        }
+        & .dec {
+            font-size: 10px;
+            & span {
+                font-size: 12px !important;
+            }
+        }
+    }
+}
+
+// Small devices (landscape phones, less than 768px)
+@mixin headings-mixin-max-sm() {
+    .mainHeading {
+        font-size: 24px;
+    }
+    .heading {
+        & .title {
+            font-size: 24px;
+            &:after {
+            }
+        }
+        & .subHeading {
+        }
+    }
+    .innerPageBanner{
+        padding: 70px 0 30px;
+        & .mainHeading {
+            height: unset;
+        }
+    }
+}
+
+// Medium devices (tablets, less than 992px)
+@mixin headings-mixin-max-md() {
+    .mainHeading {
+        font-size: 28px;
+    }
+    .cardHeadign {
+        font-size: 16px;
+    }
+    .heading {
+        & .title {  
+            font-size: 28px;
+            &:after {
+                width: 28px;
+            }
+        }
+        & .subHeading {
+        }
+    }
+}
+
+// Large devices (desktops, less than 1200px)
+@mixin headings-mixin-max-lg() {
+    .mainHeading {
+        font-size: 32px;
+    }
+    .heading {
+        & .title {
+            font-size: 32px;
+        }
+        & .subHeading {
+            font-size: 14px;
+        }
+    }
+}
+
+// X-Large devices (large desktops, less than 1400px)
+@mixin headings-mixin-max-xl() {
+}
+
+@media (max-width: 360px) {
+    .heading {
+        & .title {
+            font-size: 18px !important;
+            gap: 8px !important;
+            &:after {
+                width: 24px !important;
+            }
+        }
+        & .subHeading {
+        }
+    }
+}
