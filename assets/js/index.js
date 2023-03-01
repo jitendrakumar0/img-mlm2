@@ -175,56 +175,37 @@ if ($("[page-name=loginPage]").length) {
 
 //? ###################################### Home Page JS ######################################
 if ($("[page-name=homePage]").length) {
-    // Home page hero slider
-    // var owl = $('.heorSection');
-    // owl.owlCarousel({
-    //     margin: 10,
-    //     loop: true,
-    //     dots:true,
-    //     autoplay:true,
-    //     autoplayTimeout:3000,
-    //     autoplayHoverPause:false,
-    //     responsive: {
-    //     0: {
-    //         items: 1
-    //     },
-    //     600: {
-    //         items: 1
-    //     },
-    //     1000: {
-    //         items: 1
-    //     }
-    //     }
-    // })
-    
     // Main Event slider
     var owl = $('.mainEventSlider');
-    owl.owlCarousel({
-        margin: 20,
-        loop: true,
-        dots:true,
-        nav:true,
-        autoplay:true,
-        autoplayTimeout:3000,
-        autoplayHoverPause:false,
-        navText: ["<img class='w-100' src='assets/img/icons/leftArrow.svg'>","<img class='w-100' src='assets/img/icons/rightArrow.svg''>"],
-        responsive: {
-        0: {
-            items: 1,
-            nav:false,
-            stagePadding: 30,
-            margin: 15,
-        },
-        576: {
-            items: 1,
-            nav:false,
-            stagePadding: 100,
-        },
-        992: {
-            items: 3
-        }
-        }
-    })
+        owl.owlCarousel({
+            margin: 20,
+            loop: false,
+            dots:true,
+            nav:true,
+            // autoplay:true,
+            autoplayTimeout:3000,
+            autoplayHoverPause:false,
+            navText: ["<img class='w-100' src='assets/img/icons/leftArrow.svg'>","<img class='w-100' src='assets/img/icons/rightArrow.svg''>"],
+            responsive: {
+            0: {
+                items: 1,
+                stagePadding: 15,
+                margin: 15,
+            },
+            361: {
+                items: 1,
+                stagePadding: 80,
+                margin: 15,
+            },
+            576: {
+                items: 1,
+                stagePadding: 100,
+            },
+            992: {
+                items: 3
+            }
+            }
+        })
     
     // GLightbox js 
     var lightbox = GLightbox();

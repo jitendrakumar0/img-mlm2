@@ -2,6 +2,34 @@
 .mainHeading {
     font-size: 40px;
     font-weight: 700;
+    & .animationTxt {
+            position: relative;
+            color: $theme2;
+            -webkit-text-stroke: 0vw $gray-600;  
+            text-transform: uppercase;
+        &::before{
+            content: attr(data-text);
+            position: absolute;
+            top: 4px;
+            left: 0;
+            width: 100%;
+            height: 80%;
+            color: $theme1;
+            -webkit-text-stroke: 0vw $theme1;
+            border-right: 2px solid $theme1;
+            overflow: hidden;
+            animation: animate 3s linear infinite;
+        
+        }
+        @keyframes animate{
+            0%,10%,100%{
+                width: 0;
+            }
+            70%,90%{
+                width: 100%;
+            }
+        }
+    }
 }
 .newWelcomeHeading{
     font-size: 12px;
@@ -92,6 +120,12 @@
     }
     .mainHeading {
         font-size: 18px;
+        & .animationTxt {
+            &::before{
+                top: 2px;
+            
+            }
+        }
     }
     .newWelcomeHeading{
         font-size: 10px;
@@ -151,6 +185,12 @@
 @mixin headings-mixin-max-md() {
     .mainHeading {
         font-size: 28px;
+        & .animationTxt {
+            &::before{
+                top: 3px;
+            
+            }
+        }
     }
     .cardHeadign {
         font-size: 16px;

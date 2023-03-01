@@ -1113,7 +1113,7 @@ font-size: 12px;
             background-image:  linear-gradient(90deg, rgba($black, 0.5) 40%, rgba($light, 0.4) 100%), url(../img/bgImg/mainBg2.jpg);
             background-repeat: no-repeat;
             background-size: cover;
-            min-height:400px;
+            min-height:500px;
             height: 100vh;
             & .item {
                 &.header-text {
@@ -1245,150 +1245,10 @@ font-size: 12px;
             }
         }
         // Card Section End
-
-        // About us Section Start
-        & .aboutUs {
-            padding: 80px 0;
-            & .bgImg{
-                & img {
-                    filter: grayscale(1);
-                }
-            }
-            & .aboutDec{
-                font-size: 14px;
-            }
-            & .missionVision{
-                & .outer{
-                    & .title {
-                        font-weight: 700;
-                    }
-                    & .decription {
-                        font-size: 14px;
-                    }
-                }
-            }
-            & .aboutImg{
-                & img {
-                    height: 100%;
-                    object-fit: cover;
-                    object-position: right center;
-                }
-            }
-        }
-        // About us Section End
-
-        // Event Section Start
-        & .mainEvents {
-            padding-bottom: 80px;
-            & .mainEventSlider {
-                & .owl-stage-outer{
-                    padding: 0;
-                    // overflow: unset;
-                }
-                & .owl-dots {
-                    position: absolute;
-                    left: 0;
-                    bottom: -40px;
-                    display: flex;
-                    gap: 8px;
-                    & .owl-dot{
-                        width: 12px;
-                        height: 12px;
-                        border-radius: 50px;
-                        background-color: $gray-100;
-                        border:2px solid $theme1;
-                        transition: ease-in-out .3s;
-                        &.active {
-                            width: 30px;
-                            background-color: $theme1;
-                        }
-                    }
-                }
-                & .owl-nav{
-                    position: absolute;
-                    right: 0;
-                    bottom: -50px;
-                    display: flex;
-                    gap: 8px;
-                    z-index: 1;
-                    justify-content: end;
-                    & .owl-prev, & .owl-next {
-                        width: 32px;
-                        height: 32px;
-                        background: lighten($theme1, 10);
-                        border-radius: 50px;
-                        padding: 9px !important;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        transition: ease-in-out .3s;
-                        
-                        &.disabled {
-                            background-color: lighten($theme1, 20);
-                            &:hover {
-                                background-color: lighten($theme1, 20);
-                            }
-                        }
-                        &:hover {
-                            background: lighten($theme1, 0);
-                        }
-                    }
-                    & .owl-prev {
-                        
-                    }
-                    & .owl-next {
-                        
-                    }
-                }
-
-            }
-            & .eventOuter {
-                height: 500px;
-                & .eventImg {
-                    & img {
-                        object-fit: cover;
-                        filter: grayscale(1);
-                        transition: ease-in-out .3s;
-                    }
-                }
-                & .eventDecription {
-                    width: 65%;
-                    height: fit-content;
-                    border-radius: 32px 0;
-                    bottom: -240px;
-                    right: -240px;
-                    transition: ease-in-out .4s;
-                    & .eventTitle {
-                        font-size: 16px;
-                        font-weight: bold;
-                    }
-                    & .eventDec {
-                        font-size: 12px;
-                        display: -webkit-box;
-                        -webkit-box-orient: vertical;
-                        -webkit-line-clamp: 3;
-                        overflow: hidden;
-                    }
-                
-                }
-                &:hover {
-                    & .eventImg {
-                        & img {
-                            filter: none;
-                        }
-                    }
-                    & .eventDecription {
-                        right: 20px;
-                        bottom: 20px;
-                    }
-                }
-            }
-        }
-        // Event Section End
-
+        
         // Our Brands Section Start
         & .ourBrands {
-            padding: 80px 0 80px;
+            padding: 80px 0 40px;
             & .bransOuter{
                 & .brands {
                     width: 100%;
@@ -1441,13 +1301,146 @@ font-size: 12px;
         }
         // Our Brands Section End
 
+        // About us Section Start
+        & .aboutUs {
+            padding: 40px 0;
+            & .bgImg{
+                & img {
+                    filter: grayscale(1);
+                }
+            }
+            & .aboutDec{
+                font-size: 14px;
+            }
+            & .missionVision{
+                & .outer{
+                    & .title {
+                        font-weight: 700;
+                    }
+                    & .decription {
+                        font-size: 14px;
+                    }
+                }
+            }
+            & .aboutImg{
+                & img {
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: right center;
+                }
+            }
+        }
+        // About us Section End
+
+        // Event Section Start
+        & .mainEvents {
+            padding: 40px 0 60px;
+            & .mainEventSlider {
+                & .owl-stage-outer{
+                    padding: 0;
+                }
+                & .owl-dots {
+                    position: absolute;
+                    left: 0;
+                    bottom: -40px;
+                    display: flex;
+                    gap: 8px;
+                    justify-content: center;
+                    & .owl-dot{
+                        width: 16px;
+                        height: 16px;
+                        border-radius: 4px;
+                        background-color: $gray-100;
+                        border:2px solid $theme2;
+                        transition: ease-in-out .3s;
+                        &.active {
+                            transform: rotate(45deg);
+                            background-color: $theme2;
+                        }
+                    }
+                }
+                & .owl-nav{
+                    z-index: 1;
+                    & .owl-prev, & .owl-next {
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto;
+                        width: 32px;
+                        height: 32px;
+                        opacity: 1;
+                        background: lighten($black, 20);
+                        border-radius: 8px;
+                        padding: 9px !important;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transition: ease-in-out .3s;
+                        
+                        &.disabled {
+                            opacity: 0;
+                        }
+                        &:hover {
+                            background: lighten($black, 0);
+                        }
+                    }
+                    & .owl-prev {
+                        left: 16px;
+                    }
+                    & .owl-next {
+                        right: 16px;
+                    }
+                }
+
+            }
+            & .eventOuter {
+                height: 360px;
+                & .eventImg {
+                    & img {
+                        object-fit: cover;
+                        filter: grayscale(1);
+                        transition: ease-in-out .3s;
+                    }
+                }
+                & .eventDecription {
+                    width: calc(100% - 40px);
+                    height: fit-content;
+                    border-radius: 16px;
+                    bottom: -240px;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    transition: ease-in-out .4s;
+                    & .eventTitle {
+                        font-size: 16px;
+                        font-weight: bold;
+                    }
+                    & .eventDec {
+                        font-size: 12px;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 3;
+                        overflow: hidden;
+                    }
+                
+                }
+                &:hover {
+                    & .eventImg {
+                        & img {
+                            filter: none;
+                        }
+                    }
+                    & .eventDecription {
+                        bottom: 20px;
+                    }
+                }
+            }
+        }
+        // Event Section End
+
         // Our Videos Section Start
         & .ourVideo {
-            padding-bottom: 80px;
-            background: url(../img/bgImg/videosRight.png);
-            background-repeat: no-repeat;
-            background-position: right bottom;
-            background-size: auto;
+            padding: 40px 0;
             & .videos {
                 & .playBtn{
                     width: 50px;
@@ -1669,7 +1662,7 @@ font-size: 12px;
         &.homePage {
             // Hero Section Start
             & .main-banner {
-                min-height: 300px;
+                min-height: 400px;
                 height: 55vh;
                 & .mainCarousel {
                     &:after {
@@ -1745,6 +1738,27 @@ font-size: 12px;
             }
             // Card Section End
 
+            // Our Brands Section Start
+            & .ourBrands {
+                & .bransOuter{
+                    & .brands {
+                        height: 100px;
+                        padding: 30px;
+                        & img {
+                        }
+                        &::after{
+                        }
+                        &:hover {
+                            &:after {
+                            }
+                            & img {
+                            }
+                        }
+                    }
+                }
+            }
+            // Our Brands Section End
+    
             // About us Section Start
             & .aboutUs{
                 & .aboutDec{
@@ -1762,13 +1776,8 @@ font-size: 12px;
                     }
                 }
                 & .aboutImg{
-                    width: 70%;
+                    height: unset;
                     & img {
-                    }
-                    @keyframes flo{
-                        50%{
-                            transform: translateY(-20px);
-                        }
                     }
                 }
             }
@@ -1822,7 +1831,6 @@ font-size: 12px;
                         }
                     }
                     & .eventDecription {
-                        width: 70%;
                         & .eventTitle {
                         }
                         & .eventDec {
@@ -1840,29 +1848,6 @@ font-size: 12px;
                 }
             }
             // Event Section End
-    
-            // Our Brands Section Start
-            & .ourBrands {
-                background-size: 40%;
-                background-position: left bottom;
-                & .bransOuter{
-                    & .brands {
-                        height: 100px;
-                        padding: 30px;
-                        & img {
-                        }
-                        &::after{
-                        }
-                        &:hover {
-                            &:after {
-                            }
-                            & img {
-                            }
-                        }
-                    }
-                }
-            }
-            // Our Brands Section End
     
             // Our Videos Section Start
             & .ourVideo {
@@ -2077,14 +2062,29 @@ font-size: 12px;
             }
             // Card Section End
             
-            // About us Section Start
-            & .aboutUs{
-                padding: 60px 0;
-                & .bgImg{
-                    right: -150px!important;
-                    & img {
+            // Our Brands Section Start
+            & .ourBrands {
+                & .bransOuter{
+                    & .brands {
+                        height: 120px;
+                        padding: 40px;
+                        & img {
+                        }
+                        &::after{
+                        }
+                        &:hover {
+                            &:after {
+                            }
+                            & img {
+                            }
+                        }
                     }
                 }
+            }
+            // Our Brands Section End
+    
+            // About us Section Start
+            & .aboutUs{
                 & .aboutDec{
                 }
                 & .missionVision{
@@ -2096,7 +2096,6 @@ font-size: 12px;
                     }
                 }
                 & .aboutImg{
-                    width: 75%;
                     & img {
                     }
                 }
@@ -2105,12 +2104,10 @@ font-size: 12px;
     
             // Event Section Start
             & .mainEvents {
-                padding-bottom: 60px;
                 & .mainEventSlider {
                     & .owl-stage-outer{
                     }
                     & .owl-nav{
-                        display: none;
                     }
     
                 }
@@ -2138,33 +2135,8 @@ font-size: 12px;
             }
             // Event Section End
     
-            // Our Brands Section Start
-            & .ourBrands {
-                padding: 60px 0;
-                background-size: 40%;
-                & .bransOuter{
-                    & .brands {
-                        height: 120px;
-                        padding: 40px;
-                        & img {
-                        }
-                        &::after{
-                        }
-                        &:hover {
-                            &:after {
-                            }
-                            & img {
-                            }
-                        }
-                    }
-                }
-            }
-            // Our Brands Section End
-    
             // Our Videos Section Start
             & .ourVideo { 
-                padding: 60px 0;
-                background-size: 30%;
                 & .videos {
                     & .playBtn{
                         width: 30px;
@@ -2378,9 +2350,31 @@ font-size: 12px;
             }
             // Card Section End
 
+            // Our Brands Section Start
+            & .ourBrands {
+                padding: 50px 0 25px;
+                & .bransOuter{
+                    & .brands {
+                        height: 100px;
+                        padding: 30px;
+                        & img {
+                        }
+                        &::after{
+                        }
+                        &:hover {
+                            &:after {
+                            }
+                            & img {
+                            }
+                        }
+                    }
+                }
+            }
+            // Our Brands Section End
+
             // About us Section Start
             & .aboutUs{
-                padding: 60px 0;
+                padding: 25px 0;
                 & .aboutDec{
                 }
                 & .missionVision{
@@ -2392,13 +2386,8 @@ font-size: 12px;
                     }
                 }
                 & .aboutImg{
-                    width: 50%;
+                    width: 100%;
                     & img {
-                        @keyframes flo{
-                            50%{
-                                transform: translateY(-30px);
-                            }
-                        }
                     }
                 }
             }
@@ -2406,7 +2395,7 @@ font-size: 12px;
     
             // Event Section Start
             & .mainEvents {
-                padding-bottom: 60px;
+                padding: 25px 0 50px;
                 & .mainEventSlider {
                     & .owl-stage-outer{
                         & .owl-stage{
@@ -2420,7 +2409,6 @@ font-size: 12px;
                                         }
                                         & .eventDecription {
                                             bottom: 20px;
-                                            right: 20px;
                                             & .eventTitle {
                                             }
                                             & .eventDec {
@@ -2443,7 +2431,6 @@ font-size: 12px;
     
                 }
                 & .eventOuter {
-                    height: 400px;
                     & .eventImg {
                         & img {
                         }
@@ -2469,34 +2456,9 @@ font-size: 12px;
             }
             // Event Section End
     
-            // Our Brands Section Start
-            & .ourBrands {
-                padding: 30px 0 60px;
-                background-position: left top;
-                background-size: 30%;
-                & .bransOuter{
-                    & .brands {
-                        height: 100px;
-                        padding: 30px;
-                        & img {
-                        }
-                        &::after{
-                        }
-                        &:hover {
-                            &:after {
-                            }
-                            & img {
-                            }
-                        }
-                    }
-                }
-            }
-            // Our Brands Section End
-    
             // Our Videos Section Start
             & .ourVideo {
-                padding-bottom: 60px;
-                background-size: 20%;
+                padding: 25px 0;
                 & .videos {
                     & .playBtn{
                         width: 40px;
@@ -2674,6 +2636,25 @@ font-size: 12px;
             }
             // Hero Section End
 
+            // Our Brands Section Start
+            & .ourBrands {
+                & .bransOuter{
+                    & .brands {
+                        & img {
+                        }
+                        &::after{
+                        }
+                        &:hover {
+                            &:after {
+                            }
+                            & img {
+                            }
+                        }
+                    }
+                }
+            }
+            // Our Brands Section End
+
             // About us Section Start
             & .aboutUs{
                 & .aboutDec{
@@ -2751,25 +2732,6 @@ font-size: 12px;
                 }
             }
             // Event Section End
-    
-            // Our Brands Section Start
-            & .ourBrands {
-                & .bransOuter{
-                    & .brands {
-                        & img {
-                        }
-                        &::after{
-                        }
-                        &:hover {
-                            &:after {
-                            }
-                            & img {
-                            }
-                        }
-                    }
-                }
-            }
-            // Our Brands Section End
     
             // Our Videos Section Start
             & .ourVideo {
@@ -2935,6 +2897,25 @@ font-size: 12px;
             }
             // Hero Section End
 
+            // Our Brands Section Start
+            & .ourBrands {
+                & .bransOuter{
+                    & .brands {
+                        & img {
+                        }
+                        &::after{
+                        }
+                        &:hover {
+                            &:after {
+                            }
+                            & img {
+                            }
+                        }
+                    }
+                }
+            }
+            // Our Brands Section End
+
             // About us Section Start
             & .aboutUs{
                 & .aboutDec{
@@ -2948,7 +2929,6 @@ font-size: 12px;
                     }
                 }
                 & .aboutImg{
-                    width: 85% !important;
                     & img {
                     }
                 }
@@ -3016,25 +2996,6 @@ font-size: 12px;
                 }
             }
             // Event Section End
-
-            // Our Brands Section Start
-            & .ourBrands {
-                & .bransOuter{
-                    & .brands {
-                        & img {
-                        }
-                        &::after{
-                        }
-                        &:hover {
-                            &:after {
-                            }
-                            & img {
-                            }
-                        }
-                    }
-                }
-            }
-            // Our Brands Section End
 
             // Our Videos Section Start
             & .ourVideo {
@@ -3209,8 +3170,6 @@ font-size: 12px;
                     }
                 }
                 & .aboutImg{
-                    width: 100% !important;
-                    height: 250px !important;
                     & img {
                     }
                 }
@@ -3249,6 +3208,26 @@ font-size: 12px;
                             }
                         }
                     }
+                    & .owl-dots {
+                        & .owl-dot{
+                            &.active {
+                            }
+                        }
+                    }
+                    & .owl-nav{
+                        & .owl-prev, & .owl-next {
+                            &.disabled {
+                            }
+                            &:hover {
+                            }
+                        }
+                        & .owl-prev {
+                            left: 32px;
+                        }
+                        & .owl-next {
+                            right: 32px;
+                        }
+                    }
     
                 }
                 & .eventOuter {
@@ -3257,13 +3236,9 @@ font-size: 12px;
                         }
                     }
                     & .eventDecription {
-                        padding: 16px !important;
                         & .eventTitle {
-                            font-size: 12px !important;
                         }
                         & .eventDec {
-                            font-size: 10px;
-                            -webkit-line-clamp: 2;
                         }
                     
                     }
