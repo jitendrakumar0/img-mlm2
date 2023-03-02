@@ -4,12 +4,12 @@
 
 .tomSelect {
     &.form-select{
+        border-radius: 4px !important;
         background-size: 8px !important;
     }
     & .ts-control{
         background-color: transparent !important;
         border: none;
-        // border-bottom: 2px solid $gray-200;
         padding: 0;
         border-radius: 0;
         & .item {
@@ -272,15 +272,14 @@ font-size: 12px;
         & .form-control, & .form-select {
             width: 100%;
             min-height: 36px;
-            border-radius: 0px;
+            border-radius: 4px;
             background-color: transparent;
-            border: none;
-            border-bottom: 2px solid $gray-200;
+            border: 1px solid $gray-200;
             outline: none;
             font-size: 12px;
             font-weight: 300;
             color: $gray-900;
-            padding: 0px 0px;
+            padding:8px 12px;
             &::placeholder {
                 font-size: 12px;
                 color: $gray-500;
@@ -1440,7 +1439,7 @@ font-size: 12px;
 
         // Our Videos Section Start
         & .ourVideo {
-            padding: 40px 0;
+            padding: 40px 0 80px;
             & .videos {
                 & .playBtn{
                     width: 50px;
@@ -1460,7 +1459,7 @@ font-size: 12px;
                         display: block;
                         width: 50px;
                         height: 50px;
-                        background: $theme2;
+                        background: $theme1;
                         border-radius: 50%;
                         animation: pulse-border 1500ms ease-out infinite;
                         z-index: 0;
@@ -1476,7 +1475,7 @@ font-size: 12px;
                         display: block;
                         width: 50px;
                         height: 50px;
-                        background: $theme2;
+                        background: $theme1;
                         border-radius: 50%;
                         transition: all 200ms;
                         z-index: 0;
@@ -1497,17 +1496,19 @@ font-size: 12px;
                 &:hover {
                     & .playBtn {
                         &:after, &:before {
-                            background-color: $theme1;
+                            background-color: $theme2;
                         }
                     }
                 }
                 & .videoDecription{
-                    width: 260px;
+                    width: 100%;
                     height: fit-content;
-                    border-radius: 16px 0;
+                    border-radius: 8px 8px 0 0;
                     transition: ease-in-out .3s;
-                    top: -200px;
-                    left: -200px;
+                    bottom: -200px;
+                    right: 0;
+                    left: 0;
+                    margin: auto;
                     & .videoTitle {
                         font-size: 20px;
                         font-weight: bold;
@@ -1526,7 +1527,7 @@ font-size: 12px;
                 }
                 
                 &.otherVideos {
-                    height: 144px;
+                    height: 228px;
                     & a {
                         & img {
                             object-fit: cover;
@@ -1534,7 +1535,6 @@ font-size: 12px;
                         }
                     }
                     & .videoDecription{
-                        width: fit-content;
                         & .videoTitle {
                             font-size: 16px;
                         }
@@ -1542,36 +1542,32 @@ font-size: 12px;
                 }
                 &:hover {
                     & .videoDecription {
-                        top: 0;
-                        left: 0;
+                        bottom: 0;
                     }
                 }
             }
-            
-            
         }
         // Our Videos Section End
 
         // Get in Touch Section Start
         & .getInTouch {
             padding: 80px 0;
-            background-color: lighten($theme2, 50);
+            background-color: lighten($light, 0);
             z-index: 2;
             position: relative;  
             & .section-heading{
-                & .subHeading {
-                    font-size: 30px;
-                    text-transform: capitalize;
-                    font-weight: 700;
-                    position: relative;
-                    z-index: 2;
-                }
                 & .infoOuter {
                     cursor: pointer;
                     & .infoIcon {
                         width: 44px;
                         height: 44px;
                         padding: 14px;
+                        border-radius: 0 16px;
+                        transition: ease-in-out .3s;
+                        &:hover {
+                            border-radius: 16px 0;
+                            background-color: $theme1 !important;
+                        }
                     }
                     & a {
                         font-size: 14px;
@@ -1583,16 +1579,11 @@ font-size: 12px;
                 }
             }
             & .form {
-                // margin-left: -100px;
                 position: relative;
                 z-index: 2;
-                background-image: url(../img/bgImg/contact-form-bg.png);
-                background-repeat: no-repeat;
-                background-position: center center;
-                background-size: cover;
                 box-shadow: 0px 0px 15px rgba($dark, 10%);
-                padding: 60px 60px;
                 border-radius: 20px;
+                background-color: $white;
                 & .input-group {
                     & .form-control, & .form-select {
                         &::placeholder {
@@ -1621,14 +1612,6 @@ font-size: 12px;
                         }
                     }
                 }
-            }
-            & .contact-left-dec {
-                position: absolute;
-                z-index: -1;
-                width: 174px;
-                height: 319px;
-                left: 0;
-                top: 200px;
             }
         }
         // Get in Touch Section End
@@ -1867,7 +1850,6 @@ font-size: 12px;
                         }
                     }
                     & .videoDecription{
-                        width: 140px;
                         & .videoTitle {
                             font-size: 12px;
                         }
@@ -1897,8 +1879,6 @@ font-size: 12px;
                         }
                     }
                 }
-                
-                
             }
             // Our Videos Section End
     
@@ -2184,8 +2164,6 @@ font-size: 12px;
                         }
                     }
                 }
-                
-                
             }
             // Our Videos Section End
     
@@ -2458,7 +2436,7 @@ font-size: 12px;
     
             // Our Videos Section Start
             & .ourVideo {
-                padding: 25px 0;
+                padding: 25px 0 50px;
                 & .videos {
                     & .playBtn{
                         width: 40px;
@@ -2479,10 +2457,7 @@ font-size: 12px;
                         }
                     }
                     & .videoDecription{
-                        width: 200px;
-                        border-radius: 16px 0;
-                        top: 0;
-                        left: 0;
+                        bottom: 0;
                         & .videoTitle {
                             font-size: 16px;
                             font-weight: 600;
@@ -2499,6 +2474,7 @@ font-size: 12px;
                     }
                     
                     &.otherVideos {
+                        height: 144px;
                         & a {
                         }
                         & .videoDecription{
@@ -2512,8 +2488,6 @@ font-size: 12px;
                         }
                     }
                 }
-                
-                
             }
             // Our Videos Section End
     
@@ -2775,8 +2749,6 @@ font-size: 12px;
                         }
                     }
                 }
-                
-                
             }
             // Our Videos Section End
     
@@ -3295,7 +3267,6 @@ font-size: 12px;
                         }
                     }
                     & .videoDecription{
-                        width: 140px;
                         & .videoTitle {
                         }
                         & .subTitle{
@@ -3407,7 +3378,7 @@ font-size: 12px;
 [page-name=companyPage] {
     &.companyPage {
         & .mainSection {
-            padding: 60px 0;
+            padding: 100px 0 40px;
             & .nav {
                 &.nav-tabs {
                     top: 60px;
@@ -3449,15 +3420,12 @@ font-size: 12px;
                 & .teamMember{
                     & .outer{
                         cursor: pointer;
-                        border-bottom: 5px solid transparent;
+                        border-bottom: 5px solid $theme2;
                         transition: ease-in-out .3s;
-                        background-image: url(../img/bgImg/cardBg.jpg);
-                        background-position: right -10px;
-                        background-size: 20%;
                         background-repeat: no-repeat;
                         & .imgOuter {
-                            width: 60px;
-                            height: 60px;
+                            width: 80px;
+                            height: 80px;
                             border: 4px solid transparent;
                             background: linear-gradient(to left, rgba($theme2, 0.2), rgba($theme1, 0.2));
                             & img {
@@ -3478,7 +3446,8 @@ font-size: 12px;
                             }
                         }
                         &:hover {
-                            border-color: $theme2;
+                            border-color: $theme1;
+                            transform: translate(0, 16px);
                             & .imgOuter {
                                 & img {
                                 }
@@ -3514,9 +3483,10 @@ font-size: 12px;
                     border-color: $theme2 !important;
                     transition: ease-in-out .3s;
                     & .persent {
-                        height: 100%;
+                        height: 70px;
                         font-size: 16px;
-                        width: 90px;
+                        width: 70px;
+                        border-radius: 50px;
                         border-right: 2px solid transparent;
                         background: $theme2;
                         border-color: $theme2;
@@ -3566,12 +3536,8 @@ font-size: 12px;
                 }
                 & .outer{
                     cursor: pointer;
-                    border-bottom: 4px solid transparent;
+                    border-bottom: 4px solid $theme2;
                     transition: ease-in-out .3s;
-                    background-image: url(../img/bgImg/cardBg.jpg);
-                    background-position: 101% -10px;
-                    background-size: 20%;
-                    background-repeat: no-repeat;
                     & .imgOuter {
                         width: 50px;
                         height: 50px;
@@ -3607,7 +3573,8 @@ font-size: 12px;
                         }
                     }
                     &:hover {
-                        border-color: $theme2;
+                        border-color: $theme1;
+                        transform: translate(0, 16px);
                         & .imgOuter {
                             & img {
                             }
@@ -4116,7 +4083,6 @@ font-size: 12px;
             & .innerPageBanner{
             }
             & .mainSection {
-                padding: 30px 0;
                 & .nav {
                     &.nav-tabs {
                         & .nav-link {
@@ -4295,7 +4261,7 @@ font-size: 12px;
 [page-name=galleryPage] {
     &.galleryPage {
         & .galleryMainSection{
-            padding: 50px 0;
+            padding: 100px 0 40px;
             & .myJustifyGallery {
                 & .justifyItems {
                     &:before {
@@ -4388,7 +4354,7 @@ font-size: 12px;
 [page-name=newsPage] {
     &.newsPage {
         & .newsMainSection{
-            padding: 50px 0;
+            padding: 100px 0 40px;
             & .nav {
                 &.nav-tabs {
                     top: 60px;
@@ -4409,32 +4375,32 @@ font-size: 12px;
                         bottom: -40px;
                         display: flex;
                         gap: 8px;
+                        justify-content: center;
                         & .owl-dot{
-                            width: 12px;
-                            height: 12px;
-                            border-radius: 50px;
+                            width: 16px;
+                            height: 16px;
+                            border-radius: 4px;
                             background-color: $gray-100;
-                            border:2px solid $theme1;
+                            border:2px solid $theme2;
                             transition: ease-in-out .3s;
                             &.active {
-                                width: 30px;
-                                background-color: $theme1;
+                                transform: rotate(45deg);
+                                background-color: $theme2;
                             }
                         }
                     }
                     & .owl-nav{
-                        position: absolute;
-                        right: 0;
-                        bottom: -50px;
-                        display: flex;
-                        gap: 8px;
                         z-index: 1;
-                        justify-content: end;
                         & .owl-prev, & .owl-next {
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            margin: auto;
                             width: 32px;
                             height: 32px;
-                            background: lighten($theme1, 10);
-                            border-radius: 50px;
+                            opacity: 1;
+                            background: lighten($black, 20);
+                            border-radius: 8px;
                             padding: 9px !important;
                             display: flex;
                             justify-content: center;
@@ -4442,26 +4408,23 @@ font-size: 12px;
                             transition: ease-in-out .3s;
                             
                             &.disabled {
-                                background-color: lighten($theme1, 20);
-                                &:hover {
-                                    background-color: lighten($theme1, 20);
-                                }
+                                opacity: 0;
                             }
                             &:hover {
-                                background: lighten($theme1, 0);
+                                background: lighten($black, 0);
                             }
                         }
                         & .owl-prev {
-                            
+                            left: 16px;
                         }
                         & .owl-next {
-                            
+                            right: 16px;
                         }
                     }
     
                 }
                 & .eventOuter {
-                    height: 500px;
+                    height: 360px;
                     & .eventImg {
                         & img {
                             object-fit: cover;
@@ -4469,20 +4432,14 @@ font-size: 12px;
                             transition: ease-in-out .3s;
                         }
                     }
-                    & .offerDec {
-                        width: 50px;
-                        height: 50px;
-                        font-size: 14px;
-                        font-weight: 600;
-                        top: 20px;
-                        left: 20px;
-                    }
                     & .eventDecription {
-                        width: 65%;
+                        width: calc(100% - 40px);
                         height: fit-content;
-                        border-radius: 32px 0;
+                        border-radius: 16px;
                         bottom: -240px;
-                        right: -240px;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
                         transition: ease-in-out .4s;
                         & .eventTitle {
                             font-size: 16px;
@@ -4504,7 +4461,6 @@ font-size: 12px;
                             }
                         }
                         & .eventDecription {
-                            right: 20px;
                             bottom: 20px;
                         }
                     }
@@ -4512,7 +4468,8 @@ font-size: 12px;
             }
             & .awards {
                 & .awardsOuter {
-                    border-color: $gray-100 !important;
+                    border-color: rgba($theme2, .2) !important;
+                    transition: ease-in-out .3s;
                     cursor: pointer;
                     & .awardImg {
                         height: 200px;
@@ -4522,6 +4479,7 @@ font-size: 12px;
                         }
                     }
                     &:hover {
+                        border-color: rgba($theme1, .2) !important;
                         & .awardImg {
                             & img {
                                 transform: scale(1.05);
@@ -4563,7 +4521,7 @@ font-size: 12px;
                             display: block;
                             width: 50px;
                             height: 50px;
-                            background: $theme2;
+                            background: $theme1;
                             border-radius: 50%;
                             animation: pulse-border 1500ms ease-out infinite;
                             z-index: 0;
@@ -4579,7 +4537,7 @@ font-size: 12px;
                             display: block;
                             width: 50px;
                             height: 50px;
-                            background: $theme2;
+                            background: $theme1;
                             border-radius: 50%;
                             transition: all 200ms;
                             z-index: 0;
@@ -4600,17 +4558,19 @@ font-size: 12px;
                     &:hover {
                         & .playBtn {
                             &:after, &:before {
-                                background-color: $theme1;
+                                background-color: $theme2;
                             }
                         }
                     }
                     & .videoDecription{
-                        width: 260px;
+                        width: 100%;
                         height: fit-content;
-                        border-radius: 16px 0;
+                        border-radius: 8px 8px 0 0;
                         transition: ease-in-out .3s;
-                        top: -200px;
-                        left: -200px;
+                        bottom: -200px;
+                        right: 0;
+                        left: 0;
+                        margin: auto;
                         & .videoTitle {
                             font-size: 20px;
                             font-weight: bold;
@@ -4629,7 +4589,7 @@ font-size: 12px;
                     }
                     
                     &.otherVideos {
-                        height: 144px;
+                        height: 228px;
                         & a {
                             & img {
                                 object-fit: cover;
@@ -4637,15 +4597,14 @@ font-size: 12px;
                             }
                         }
                         & .videoDecription{
-                            width: fit-content;
                             & .videoTitle {
+                                font-size: 16px;
                             }
                         }
                     }
                     &:hover {
                         & .videoDecription {
-                            top: 0;
-                            left: 0;
+                            bottom: 0;
                         }
                     }
                 }
@@ -4743,11 +4702,6 @@ font-size: 12px;
                                                 & img {
                                                 }
                                             }
-                                            & .offerDec  {
-                                                width: 36px;
-                                                height: 36px;
-                                                font-size: 10px;
-                                            }
                                             & .eventDecription {
                                                 & .eventTitle {
                                                 }
@@ -4784,7 +4738,6 @@ font-size: 12px;
                             }
                         }
                         & .eventDecription {
-                            width: 70%;
                             & .eventTitle {
                             }
                             & .eventDec {
@@ -4829,9 +4782,7 @@ font-size: 12px;
                         & .playBtn{
                             & img {
                             }
-                            &:before, &:after {
-                                width: 30px;
-                                height: 30px;
+                            &:before {
                             }
                             &:after {
                             }
@@ -4843,7 +4794,6 @@ font-size: 12px;
                             }
                         }
                         & .videoDecription{
-                            width: 140px;
                             & .videoTitle {
                                 font-size: 12px;
                             }
@@ -4854,19 +4804,17 @@ font-size: 12px;
                         &.trandingVideo{
                             height: 160px;
                             & a {
-                                & img {
-                                }
+                                
                             }
                         }
                         
                         &.otherVideos {
                             height: 110px;
                             & a {
-                                & img {
-                                }
                             }
                             & .videoDecription{
                                 & .videoTitle {
+                                    font-size: 12px;
                                 }
                             }
                         }
@@ -4920,7 +4868,6 @@ font-size: 12px;
                         & .owl-stage-outer{
                         }
                         & .owl-nav{
-                            display: none;
                         }
         
                     }
@@ -4928,11 +4875,6 @@ font-size: 12px;
                         & .eventImg {
                             & img {
                             }
-                        }
-                        & .offerDec  {
-                            width: 40px;
-                            height: 40px;
-                            font-size: 12px;
                         }
                         & .eventDecription {
                             & .eventTitle {
@@ -4978,8 +4920,8 @@ font-size: 12px;
                             width: 30px;
                             height: 30px;
                             padding: 7px;
-                            
                             & img {
+                                width: 100%;
                             }
                             &:before, &:after {
                                 width: 30px;
@@ -5003,15 +4945,12 @@ font-size: 12px;
                         &.trandingVideo{
                             height: 240px;
                             & a {
-                                & img {
-                                }
+                                
                             }
                         }
                         
                         &.otherVideos {
                             & a {
-                                & img {
-                                }
                             }
                             & .videoDecription{
                                 & .videoTitle {
@@ -5077,7 +5016,6 @@ font-size: 12px;
                                             }
                                             & .eventDecription {
                                                 bottom: 20px;
-                                                right: 20px;
                                                 & .eventTitle {
                                                 }
                                                 & .eventDec {
@@ -5100,7 +5038,6 @@ font-size: 12px;
         
                     }
                     & .eventOuter {
-                        height: 400px;
                         & .eventImg {
                             & img {
                             }
@@ -5165,9 +5102,7 @@ font-size: 12px;
                             }
                         }
                         & .videoDecription{
-                            width: 200px;
-                            top: 0;
-                            left: 0;
+                            bottom: 0;
                             & .videoTitle {
                                 font-size: 16px;
                                 font-weight: 600;
@@ -5179,18 +5114,17 @@ font-size: 12px;
                         &.trandingVideo{
                             height: 312px;
                             & a {
-                                & img {
-                                }
+                                
                             }
                         }
                         
                         &.otherVideos {
+                            height: 144px;
                             & a {
-                                & img {
-                                }
                             }
                             & .videoDecription{
                                 & .videoTitle {
+                                    font-size: 16px;
                                 }
                             }
                         }
@@ -5350,7 +5284,7 @@ font-size: 12px;
                         & .playBtn{
                             & img {
                             }
-                            &:before {
+                            &:before, &:after {
                             }
                             &:after {
                             }
@@ -5369,15 +5303,12 @@ font-size: 12px;
                         }
                         &.trandingVideo{
                             & a {
-                                & img {
-                                }
+                                
                             }
                         }
                         
                         &.otherVideos {
                             & a {
-                                & img {
-                                }
                             }
                             & .videoDecription{
                                 & .videoTitle {
@@ -5426,6 +5357,73 @@ font-size: 12px;
 // X-Large devices (large desktops, less than 1400px)
 @mixin newsPage-mixin-max-xl() {
 }
+@media (max-width: 480px) {
+    [page-name=newsPage] {
+        &.newsPage {
+            & .newsMainSection{
+                & .offers {
+                    & .offerSlider {
+                        & .owl-stage-outer{
+                            & .owl-stage{
+                                & .owl-item {
+                                    &.active {
+                                        & .eventOuter {
+                                            & .eventImg {
+                                                & img {
+                                                }
+                                            }
+                                            & .eventDecription {
+                                                & .eventTitle {
+                                                }
+                                                & .eventDec {
+                                                }
+                                            
+                                            }
+                                            &:hover {
+                                                & .eventImg {
+                                                    & img {
+                                                    }
+                                                }
+                                                & .eventDecription {
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+        
+                    }
+                    & .eventOuter {
+                        & .eventImg {
+                            & img {
+                            }
+                        }
+                        & .eventDecription {
+                            padding: 16px !important;
+                            & .eventTitle {
+                                font-size: 12px !important;
+                            }
+                            & .eventDec {
+                                font-size: 10px;
+                                -webkit-line-clamp: 2;
+                            }
+                        
+                        }
+                        &:hover {
+                            & .eventImg {
+                                & img {
+                                }
+                            }
+                            & .eventDecription {
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 @media (max-width: 360px) {
     [page-name=newsPage] {
         &.newsPage {
@@ -5461,7 +5459,27 @@ font-size: 12px;
                                 }
                             }
                         }
-            
+                        & .owl-dots {
+                            & .owl-dot{
+                                &.active {
+                                }
+                            }
+                        }
+                        & .owl-nav{
+                            & .owl-prev, & .owl-next {
+                                &.disabled {
+                                }
+                                &:hover {
+                                }
+                            }
+                            & .owl-prev {
+                                left: 32px;
+                            }
+                            & .owl-next {
+                                right: 32px;
+                            }
+                        }
+        
                     }
                     & .eventOuter {
                         & .eventImg {
@@ -5469,13 +5487,9 @@ font-size: 12px;
                             }
                         }
                         & .eventDecription {
-                            padding: 16px !important;
                             & .eventTitle {
-                                font-size: 12px !important;
                             }
                             & .eventDec {
-                                font-size: 10px;
-                                -webkit-line-clamp: 2;
                             }
                         
                         }
@@ -5533,7 +5547,7 @@ font-size: 12px;
             }
         }
         & .mainSection {
-            padding: 60px 0;
+            padding: 100px 0 40px;
             & .onlineTraining {
             }
             & .cntEvent {
@@ -5789,8 +5803,14 @@ font-size: 12px;
             }
         }
         & .MainSection {
-            padding: 50px 0;
-            background-color: lighten($theme2, 50);
+            padding: 100px 0 40px;
+            & .heading {
+                & .title {
+                    &:after {
+                        margin: 0 auto;
+                    }
+                }
+            }
         }
         & .searchResult{
             padding: 50px 0;
@@ -5804,58 +5824,72 @@ font-size: 12px;
                 }
             }
             & .branchOuter {
-                & .outer{
-                    cursor: pointer;
-                    border-bottom: 5px solid transparent;
-                    transition: ease-in-out .3s;
-                    background-image: url(../img/bgImg/branchCardImg1.png);
-                    background-position: 150% 260%;
-                    background-size: 60%;
-                    background-repeat: no-repeat;
-                    & .imgOuter {
-                        width: 60px;
-                        height: 60px;
-                        border: 4px solid transparent;
+                // & .outer{
+                //     cursor: pointer;
+                //     border-bottom: 5px solid transparent;
+                //     transition: ease-in-out .3s;
+                //     & .imgOuter {
+                //         width: 60px;
+                //         height: 60px;
+                //         border: 4px solid transparent;
+                //         background: linear-gradient(to left, rgba($theme2, 0.2), rgba($theme1, 0.2));
+                //         & img {
+                //             object-fit: cover;
+                //         }
+                //     }
+                //     & .memberName{
+                //         font-size: 14px;
+                //     }
+                //     & .memberPost {
+                //         font-size: 12px;
+                //     }
+                //     & .memberDetail {
+                //         & .title{
+                //             font-size: 12px;
+                //             color: $gray-400;
+                //             & .link {
+                //                 &:hover {
+                //                     color: $theme2 !important;
+                //                 }
+                //             }
+                //         }
+                //     }
+                //     &:hover {
+                //         box-shadow: 0 0.5rem 1rem rgba($dark, 0.15) !important  ;
+                //         border-color: $theme2;
+                //         & .imgOuter {
+                //             & img {
+                //             }
+                //         }
+                //         & .memberDetail {
+
+                //             & .decription{
+
+                //             }
+                //         }
+                //     }
+                // }
+                & .cardOuter{
+                    padding: 10px;
+                    position: relative;
+                    &:before {
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 0%;
+                        position: absolute;
                         background: linear-gradient(to left, rgba($theme2, 0.2), rgba($theme1, 0.2));
-                        & img {
-                            object-fit: cover;
-                        }
-                    }
-                    & .memberName{
-                        font-size: 14px;
-                    }
-                    & .memberPost {
-                        font-size: 12px;
-                    }
-                    & .memberDetail {
-                        & .title{
-                            font-size: 12px;
-                            color: $gray-400;
-                            & .link {
-                                &:hover {
-                                    color: $theme2 !important;
-                                }
-                            }
-                        }
+                        inset: 0;
+                        transition: ease-in-out .3s;
+                        margin: auto;
                     }
                     &:hover {
-                        box-shadow: 0 0.5rem 1rem rgba($dark, 0.15) !important  ;
-                        border-color: $theme2;
-                        & .imgOuter {
-                            & img {
-                            }
-                        }
-                        & .memberDetail {
-
-                            & .decription{
-
-                            }
+                        &:before {
+                            height: 100%;
                         }
                     }
-                }
-                & .cardOuter{
                     & .logoOuter{
-                        background-image:  linear-gradient(90deg, rgba(darken($theme2, 30), 0.5) 100%, rgba(darken($theme2, 30), 0.5) 100%), url(../img/bgImg/worldImg.png);
+                        background-image:  linear-gradient(90deg, rgba(darken($theme2, 30), 1) 100%, rgba(darken($theme2, 30), 1) 100%), url(../img/bgImg/worldImg.png);
                         background-repeat: no-repeat;
                         background-size: contain;
                         background-position: center;

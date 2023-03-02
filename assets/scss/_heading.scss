@@ -61,23 +61,29 @@
         color: $dark;
     }
 }
-.innerPageBanner{
-    padding: 100px 0 40px;
-    background-image: linear-gradient(90deg, rgba($dark, 0.5) 30%, rgba($dark, 0.3) 100%), url(../img/bgImg/company-banner.jpg);
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    &.products {
-        background-image: linear-gradient(90deg, rgba($dark, 0.5) 30%, rgba($dark, 0.3) 100%), url(../img/bgImg/aaurvedhaBg.png);
-        background-position: bottom;
-    }
-    & .mainHeading {
-        height: 20vh;
-        align-items: center;
-        display: flex;
+.newHeading{
+    & .title {
+        font-size: 24px;
+        font-weight: bold;
     }
 }
+// .innerPageBanner{
+//     padding: 100px 0 40px;
+//     background-image: linear-gradient(90deg, rgba($dark, 0.5) 30%, rgba($dark, 0.3) 100%), url(../img/bgImg/company-banner.jpg);
+//     width: 100%;
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     background-attachment: fixed;
+//     &.products {
+//         background-image: linear-gradient(90deg, rgba($dark, 0.5) 30%, rgba($dark, 0.3) 100%), url(../img/bgImg/aaurvedhaBg.png);
+//         background-position: bottom;
+//     }
+//     & .mainHeading {
+//         height: 20vh;
+//         align-items: center;
+//         display: flex;
+//     }
+// }
 .tabHeading {
     & .title {
     }

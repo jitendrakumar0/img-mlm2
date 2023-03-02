@@ -332,7 +332,7 @@ if ($("[page-name=galleryPage]").length) {
 
     // Justify Gallery
     $(".myJustifyGallery").justifiedGallery({
-        rowHeight: 180,
+        rowHeight: 240,
         lastRow: 'nojustify',
         margins: 16,
         captions: false
