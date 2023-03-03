@@ -65,8 +65,8 @@
             // margin-bottom: -3px;
             &.active {
                 border-color: $theme1 !important;
-                color: $theme1 !important;
-                backdrop-filter: blur(8px);
+                color: $white !important;
+                background-color: $theme1;
             }
         }
     }
@@ -2502,7 +2502,11 @@ font-size: 12px;
                         & .infoIcon {
                             width: 36px;
                             height: 36px;
-                            padding: 8px;
+                            padding: 10px;
+                            border-radius: 0 12px;      
+                            &:hover {
+                                border-radius: 12px 0;   
+                            }                  
                         }
                         & a {
                             font-size: 12px;
@@ -3508,20 +3512,22 @@ font-size: 12px;
                 }
             }
             & .successStories { 
-                & .nav {
-                    &.nav-tabs {
-                        top: 120px;
-                        & .nav-link {
-                            color: $gray-300;
-                            border-bottom: 1px solid $gray-300  !important;
-                            font-size: 12px;
-                            padding: 10px 0;
-                            &.active {
-                                border-color: $white !important;
-                                color: $white !important;
-                                backdrop-filter: none ;
-                                background-color: lighten($theme2, 20) !important;
-                                letter-spacing: 1px;
+                & .innerNavTab {
+                    &.nav {
+                        &.nav-tabs {
+                            top: 120px;
+                            & .nav-link {
+                                color: $gray-300;
+                                border-bottom: 1px solid $gray-300  !important;
+                                font-size: 12px;
+                                padding: 10px 0;
+                                &.active {
+                                    border-color: $white !important;
+                                    color: $white !important;
+                                    backdrop-filter: none ;
+                                    background-color: lighten($theme2, 20) !important;
+                                    letter-spacing: 1px;
+                                }
                             }
                         }
                     }
@@ -3679,23 +3685,25 @@ font-size: 12px;
                 }
                 & .successStories { 
                     & .tabSection{
-                        & .nav {
-                            &.nav-tabs {
-                                top: 120px;
-                                flex-wrap: wrap;
-                                & .nav-link {
-                                    color: $gray-300;
-                                    border-bottom: 1px solid $gray-300  !important;
-                                    font-size: 12px;
-                                    padding: 10px 0;
-                                    
-                                    white-space: normal;
-                                    &.active {
-                                        border-color: $white !important;
-                                        color: $white !important;
-                                        backdrop-filter: none ;
-                                        background-color: lighten($theme2, 20) !important;
-                                        letter-spacing: 1px;
+                        & .innerNavTab {
+                            &.nav {
+                                &.nav-tabs {
+                                    top: 120px;
+                                    flex-wrap: wrap;
+                                    & .nav-link {
+                                        color: $gray-300;
+                                        border-bottom: 1px solid $gray-300  !important;
+                                        font-size: 12px;
+                                        padding: 10px 0;
+                                        
+                                        white-space: normal;
+                                        &.active {
+                                            border-color: $white !important;
+                                            color: $white !important;
+                                            backdrop-filter: none ;
+                                            background-color: lighten($theme2, 20) !important;
+                                            letter-spacing: 1px;
+                                        }
                                     }
                                 }
                             }
@@ -3853,16 +3861,18 @@ font-size: 12px;
                         top: 93px;
                         z-index: 1;
                     }
-                    & .nav {
-                        &.nav-tabs {
-                            position: unset;
-                            overflow: auto hidden;
-                            flex-wrap: nowrap;
-                            & .nav-link {
-                                white-space: nowrap;
-                                border: none !important;
-                                font-size: 12px;
-                                &.active {
+                    & .innerNavTab {
+                        &.nav {
+                            &.nav-tabs {
+                                position: unset;
+                                overflow: auto hidden;
+                                flex-wrap: nowrap;
+                                & .nav-link {
+                                    white-space: nowrap;
+                                    border: none !important;
+                                    font-size: 12px;
+                                    &.active {
+                                    }
                                 }
                             }
                         }
@@ -4018,16 +4028,18 @@ font-size: 12px;
                     }
                 }
                 & .successStories {
-                    & .nav {
-                        &.nav-tabs {
-                            top: 120px;
-                            flex-wrap: wrap;
-                            & .nav-link {
-                                white-space: normal;
-                                font-size: 10px;
-                                padding: 8px 0;
-                                font-weight: 300;
-                                &.active {
+                    & .innerNavTab{
+                        &.nav {
+                            &.nav-tabs {
+                                top: 120px;
+                                flex-wrap: wrap;
+                                & .nav-link {
+                                    white-space: normal;
+                                    font-size: 10px;
+                                    padding: 8px 0;
+                                    font-weight: 300;
+                                    &.active {
+                                    }
                                 }
                             }
                         }
@@ -4432,6 +4444,14 @@ font-size: 12px;
                             transition: ease-in-out .3s;
                         }
                     }
+                    & .offerDec {
+                        width: 40px;
+                        height: 40px;
+                        font-size: 12px;
+                        font-weight: 600;
+                        top: 16px;
+                        right: 16px;
+                    }
                     & .eventDecription {
                         width: calc(100% - 40px);
                         height: fit-content;
@@ -4619,6 +4639,26 @@ font-size: 12px;
                 & .eventVideoSlider {
                     & .owl-stage-outer {
                         padding: 0;
+                    }
+                    & .owl-dots {
+                        position: absolute;
+                        left: 0;
+                        bottom: -40px;
+                        display: flex;
+                        gap: 8px;
+                        justify-content: center;
+                        & .owl-dot{
+                            width: 16px;
+                            height: 16px;
+                            border-radius: 4px;
+                            background-color: $gray-100;
+                            border:2px solid $theme2;
+                            transition: ease-in-out .3s;
+                            &.active {
+                                transform: rotate(45deg);
+                                background-color: $theme2;
+                            }
+                        }
                     }
                     & .videoOuter {
                         height: 260px;
@@ -6152,7 +6192,7 @@ font-size: 12px;
 [page-name=downloadPage] {
     &.downloadPage {
         & .mainSection {
-            padding: 60px 0;
+            padding: 100px 0 40px;
             & .dataTables_wrapper {
                 & .row {
                     &:first-child{
@@ -6306,7 +6346,7 @@ font-size: 12px;
 [page-name=careerPage] {
     &.careerPage {
         & .mainSection {
-            padding: 60px 0;
+            padding: 100px 0 40px;
             & .successStories { 
                 & .nav {
                     &.nav-tabs {
@@ -6434,19 +6474,23 @@ font-size: 12px;
                             top: 0;
                             bottom: 0;
                             margin: auto;
-                            background-color: lighten($theme1, 5);
+                            opacity: 1;
+                            background-color: lighten($dark, 5);
                             transition: ease-in-out .3s;
-                            border-radius: 50px;
+                            border-radius: 8px;
                             border: 3px solid $white;
                             & img {
                                 width: 40%;
                                 transition: ease-in-out .3s;
                             }
                             &:hover {
-                                background-color: lighten($theme1, 0);
+                                background-color: lighten($dark, 0);
                                 & img {
                                     transform: rotateY(180deg);
                                 }
+                            }
+                            &.disabled {
+                                opacity: 0;
                             }
                         }
                         & .owl-prev {
@@ -6637,7 +6681,6 @@ font-size: 12px;
     [page-name=careerPage] {
         &.careerPage {
             & .mainSection {
-                padding: 30px 0;
                 & .successStories { 
                     & .tabSection {
                         position: sticky;
@@ -6745,7 +6788,6 @@ font-size: 12px;
     [page-name=careerPage] {
         &.careerPage {
             & .mainSection {
-                padding: 30px 0;
                 & .successStories { 
                     & .nav {
                         &.nav-tabs {
@@ -6856,27 +6898,48 @@ font-size: 12px;
 [page-name=contactUsPage] {
     &.contactUsPage {
         & .mainSection {
-            padding: 60px 0;
             & .contactUsOuter {
+                z-index: 6;
+                position: relative;
+                padding: 50px 0 80px;
                 & .card {
                     cursor: pointer;
+                    position: relative;
+                    &.cardsHover{
+                        & .innera {
+                            height:0;
+                            width:0;
+                            background-color: rgba($theme2, 0.1);
+                            transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+                            transform: translate(-50%, -50%);
+                            z-index: -1;
+                        }
+                        
+                        &:hover {
+                            & .innera {
+                            width: 300%;
+                            height: 300%;
+                            }
+                        }
+                    }
+                    &:before {
+                        // content: '';
+                        display: block;
+                        height: 100%;
+                        width: 100px;
+                        background-color: $theme1;
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto;
+                    }
                     & .cardIcon {
-                        width: 50px;
-                        height: 50px;
-                        margin-top: -73px;
+                        width: 60px;
+                        height: 60px;
+                        padding: 20px;
+                        transition: ease-in-out .3s;
                         & img {
                             z-index: 1;
-                        }
-                        &:after {
-                            content: '';
-                            display: block;
-                            width: 100%;
-                            height: 100%;
-                            position: absolute;
-                            background-color: $theme1;
-                            transition: ease-in-out .5s;
-                            opacity: 0;
-                            border-radius: 50px;
                         }
                     }
                     & .tollfree{
@@ -6893,16 +6956,14 @@ font-size: 12px;
                     }
                     &:hover {
                         & .cardIcon {
-                            &:after {
-                                opacity: 1;
-                                transform: rotateY(180deg);
-                            }
+                            border-radius: 50px !important;
+                            background-color: $theme1 !important;
                         }
                     }
                 }
             }
             & .getInTouch {
-                padding: 48px 0;
+                padding: 80px 0 40px;
                 background-color: lighten($theme2, 50);
                 z-index: 2;
                 position: relative;  
@@ -6936,10 +6997,6 @@ font-size: 12px;
                 & .form {
                     position: relative;
                     z-index: 2;
-                    background-image: url(../img/bgImg/contact-form-bg.png);
-                    background-repeat: no-repeat;
-                    background-position: center center;
-                    background-size: cover;
                     box-shadow: 0px 0px 15px rgba($dark, 10%);
                     padding: 50px 50px;
                     border-radius: 20px;
@@ -6988,13 +7045,21 @@ font-size: 12px;
                 background-size: cover;
                 background-position: top center;
                 background-attachment: fixed;
-                padding: 100px 0;
+                height: 100vh;
+                min-height: 400px;
+                & .heading {
+                    & .title {
+                        &::after {
+                            margin: auto ;
+                        }
+                    }
+                }
                 & .outer {
                     height: 120px;
                     backdrop-filter: blur(10px);
                     cursor: pointer;
                         & .title {
-                            font-size: 14px;
+                            font-size: 18px;
                         }
                     & .number {
                         font-size: 24px;
@@ -7003,6 +7068,7 @@ font-size: 12px;
                     }
                     &:hover {
                         & .number {
+                            right: 0 !important;
                         }
                     }
                 }
@@ -7048,7 +7114,6 @@ font-size: 12px;
                         & .cardIcon {
                             width: 40px;
                             height: 40px;
-                            margin-top: -44px;
                             padding: 12px;
                             & img {
                             }
@@ -7130,7 +7195,6 @@ font-size: 12px;
                     }
                 }
                 & .customerCare {
-                    padding: 60px 0;
                     & .outer {
                         height: 80px;
                             & .title {
@@ -7157,6 +7221,8 @@ font-size: 12px;
             & .mainSection {
                 & .contactUsOuter {
                     & .card {
+                        max-width: 360px;
+                        margin: 0 auto;
                         & .cardIcon {
                             & img {
                             }
@@ -7215,8 +7281,8 @@ font-size: 12px;
     [page-name=contactUsPage] {
         &.contactUsPage {
             & .mainSection {
-                padding: 30px 0;
                 & .contactUsOuter {
+                    padding: 25px 0 50px;
                     & .card {
                         & .cardIcon {
                             & img {
@@ -7241,10 +7307,10 @@ font-size: 12px;
                     }
                 }
                 & .getInTouch {
+                    padding: 50px 0 25px;
                     & .section-heading{
                     }
                     & .form {
-                        padding: 50px 20px;
                         & .input-group {
                             & .form-control, & .form-select {
                                 font-size: 12px;
@@ -7303,6 +7369,7 @@ font-size: 12px;
                     }
                 }
                 & .customerCare {
+                    max-height: 500px;
                     & .outer {
                         height: 80px;
                         cursor: pointer;
@@ -7339,10 +7406,6 @@ font-size: 12px;
                     & .card {
                         cursor: pointer;
                         & .cardIcon {
-                            width: 40px;
-                            height: 40px;
-                            margin-top: -44px;
-                            padding: 12px;
                             & img {
                             }
                             &:after {
@@ -7455,6 +7518,39 @@ font-size: 12px;
 //? ###################################### Product Page Start ######################################
 [page-name=productPage] {
     &.productPage {
+        & .productMainSlider{
+            & .imgOuter {
+                height: 100vh;
+                padding-top: 80px;
+                & img {
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+            & .owl-stage-outer{
+                padding: 0;
+            }
+            & .owl-dots{
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                gap: 16px;
+                position: absolute;
+                bottom: 20px;
+                & .owl-dot {
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 4px;
+                    border: 2px solid $theme2;
+                    position: relative;
+                    transition: ease-in-out .3s;
+                    &.active{
+                        transform: rotate(45deg);
+                        background-color: $theme2;
+                    }
+                }
+            }
+        }
         & .mainSection {
             padding: 60px 0;
             & .productsMainOuter {
@@ -7610,7 +7706,26 @@ font-size: 12px;
 @mixin productPage-mixin-max-md() {
     [page-name=productPage] {
         &.productPage {
+            & .productMainSlider{
+                & .imgOuter {
+                    height: 100%;
+                    padding-top: 60px;
+                    & img {
+                    }
+                }
+                & .owl-stage-outer{
+                }
+                & .owl-dots{
+                    & .owl-dot {
+                        width: 12px;
+                        height: 12px;
+                        &.active{
+                        }
+                    }
+                }
+            }
             & .mainSection {
+                padding: 40px 0;
                 & .productsMainOuter {
                     & .card {
                         cursor: pointer;

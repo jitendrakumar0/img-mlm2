@@ -97,13 +97,13 @@
     }
     &.nav-active {
         height: 60px;
-        background-color: $white;
+        background-color: rgba($theme2, 0.9) !important;
         box-shadow: 0px 0px 8px $gray-400;
         & .navbar-collapse {
             & .navbar-nav {
                 & .nav-item {
                     & .nav-link {
-                        color: $dark;
+                        // color: $White;
                         &:after {
                         }
                         &.active, &:hover {

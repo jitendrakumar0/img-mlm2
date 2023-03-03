@@ -182,9 +182,6 @@ if ($("[page-name=homePage]").length) {
             loop: false,
             dots:true,
             nav:true,
-            // autoplay:true,
-            autoplayTimeout:3000,
-            autoplayHoverPause:false,
             navText: ["<img class='w-100' src='assets/img/icons/leftArrow.svg'>","<img class='w-100' src='assets/img/icons/rightArrow.svg''>"],
             responsive: {
             0: {
@@ -347,67 +344,67 @@ if ($("[page-name=galleryPage]").length) {
 if ($("[page-name=newsPage]").length) {
     // Main Event slider
     var owl = $('.offerSlider');
-    owl.owlCarousel({
-        margin: 20,
-        loop: true,
-        dots:true,
-        nav:true,
-        autoplay:true,
-        autoplayTimeout:3000,
-        autoplayHoverPause:false,
-        navText: ["<img class='w-100' src='assets/img/icons/leftArrow.svg'>","<img class='w-100' src='assets/img/icons/rightArrow.svg''>"],
-        responsive: {
-        0: {
-            items: 1,
-            nav:false,
-            stagePadding: 30,
-            margin: 15,
-        },
-        576: {
-            items: 1,
-            nav:false,
-            stagePadding: 100,
-        },
-        992: {
-            items: 3
-        }
-        }
-    })
+        owl.owlCarousel({
+            margin: 20,
+            loop: false,
+            dots:true,
+            nav:true,
+            navText: ["<img class='w-100' src='assets/img/icons/leftArrow.svg'>","<img class='w-100' src='assets/img/icons/rightArrow.svg''>"],
+            responsive: {
+            0: {
+                items: 1,
+                stagePadding: 15,
+                margin: 15,
+            },
+            361: {
+                items: 1,
+                stagePadding: 80,
+                margin: 15,
+            },
+            576: {
+                items: 1,
+                stagePadding: 100,
+            },
+            992: {
+                items: 3
+            }
+            }
+        })
 
     // Event slider
     var owl = $('.eventVideoSlider');
-    owl.owlCarousel({
-        margin: 20,
-        loop: true,
-        dots:true,
-        nav:true,
-        // autoplay:true,
-        // autoplayTimeout:3000,
-        // autoplayHoverPause:false,
-        navText: ["<img class='w-100' src='assets/img/icons/leftArrow.svg'>","<img class='w-100' src='assets/img/icons/rightArrow.svg''>"],
-        responsive: {
-        0: {
-            items: 1,
-            nav:false,
-            stagePadding: 50,
-            margin: 15,
-        },
-        380: {
-            items: 1,
-            nav:false,
-            stagePadding: 60,
-            margin: 15,
-        },
-        576: {
-            items: 2,
-            nav:false,
-            stagePadding: 50,
-        },
-        992: {
-            items: 4
-        }
-        }
-    })
+        owl.owlCarousel({
+            margin: 20,
+            loop: true,
+            dots:true,
+            nav:true,
+            autoplay:true,
+            autoplayTimeout:3000,
+            autoplayHoverPause:false,
+            navText: ["<img class='w-100' src='assets/img/icons/leftArrow.svg'>","<img class='w-100' src='assets/img/icons/rightArrow.svg''>"],
+            responsive: {
+            0: {
+                items: 1,
+                nav:false,
+                stagePadding: 50,
+                margin: 15,
+            },
+            380: {
+                items: 1,
+                nav:false,
+                stagePadding: 60,
+                margin: 15,
+            },
+            576: {
+                items: 2,
+                nav:false,
+                stagePadding: 50,
+            },
+            992: {
+                items: 4
+            }
+            }
+        })
 
     // bootstrap tooltip 
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
@@ -553,13 +550,10 @@ if ($("[page-name=careerPage]").length) {
     var owl = $('.workCulture');
     owl.owlCarousel({
         margin: 10,
-        loop: true,
+        loop: false,
         dots:true,
         nav:true,
         navText: ["<img class='' src='assets/img/icons/leftArrow.svg'>","<img class='' src='assets/img/icons/rightArrow.svg''>"],
-        autoplay:true,
-        autoplayTimeout:3000,
-        autoplayHoverPause:false,
         responsive: {
         0: {
             items: 1,
@@ -639,12 +633,42 @@ if ($("[page-name=contactUsPage]").length) {
         create: false
     }); 
 
+    $(function() {  
+        $('.cardsHover')
+          .on('mouseenter', function(e) {
+                  var parentOffset = $(this).offset(),
+                    relX = e.pageX - parentOffset.left,
+                    relY = e.pageY - parentOffset.top;
+                  $(this).find('span').css({top:relY, left:relX})
+          })
+          .on('mouseout', function(e) {
+                  var parentOffset = $(this).offset(),
+                    relX = e.pageX - parentOffset.left,
+                    relY = e.pageY - parentOffset.top;
+              $(this).find('span').css({top:relY, left:relX})
+          });
+      });
+
 }
 //! ###################################### Contact Us Page JS ######################################
 
-//? ###################################### Contact Us Page JS ######################################
+//? ###################################### Product Page JS ######################################
 if ($("[page-name=productPage]").length) {
-
+    // product main slider
+    var owl = $('.productMainSlider');
+    owl.owlCarousel({
+        // margin: 10,
+        loop: true,
+        dots:true,
+        nav:false,
+        navText: ["<img class='' src='assets/img/icons/leftArrow.svg'>","<img class='' src='assets/img/icons/rightArrow.svg''>"],
+        responsive: {
+            0: {
+                items: 1,
+            }
+        }
+    })
+    //  product slider
     var owl = $('.productImgSlider');
     owl.owlCarousel({
         margin: 10,
@@ -694,19 +718,6 @@ if ($("[page-name=productPage]").length) {
             };
         });
     });
-    // productOuter.forEach(productOuters =>{
-    //     productOuters.addEventListener('click', (e)=>{
-    //         if(e.currentTarget.classList.contains('showDetail')){
-    //             e.currentTarget.classList.remove('showDetail');
-    //         }
-    //         else{
-    //             for(i=0; i<productOuter.length; i++){
-    //                 productOuter[i].classList.remove('showDetail');
-    //             };
-    //             e.currentTarget.classList.add('showDetail');
-    //         }
-    //     });
-    // });
 
 }
-//! ###################################### Contact Us Page JS ######################################
+//! ###################################### Product Page JS ######################################
