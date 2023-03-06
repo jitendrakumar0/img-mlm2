@@ -152,6 +152,7 @@
 .offcanvas {
     &.offcanvas-start{
         &.mobileHeader {
+            max-width: 320px;
             & .offcanvas-header {
                & .offcanvas-title{
                    width: 120px;
@@ -170,7 +171,6 @@
                                 color: $dark;
                                 text-transform: uppercase;
                                 position: relative;
-                                letter-spacing: 1px;
                                 transition: ease-in-out .3s;
                                 padding-right: 16px;
                                 display: flex;
@@ -179,8 +179,9 @@
                                 &:before {
                                     content: '';
                                     display: block;
-                                    width: 3px;
-                                    height: 3px;
+                                    width: 4px;
+                                    height: 4px;
+                                    opacity: 0;
                                     border-radius: 50px;
                                     background-color: $theme1;
                                     transition: ease-in-out .3s;
@@ -210,7 +211,7 @@
                                 &.active, &:hover {
                                     color: $theme1;
                                     &:before {
-                                        width: 15px;
+                                        opacity: 1;
                                     }
                                 }
                             }

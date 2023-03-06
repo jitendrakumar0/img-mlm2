@@ -147,7 +147,7 @@ font-size: 12px;
                             & .form-control{font-size: 14px;
                                 font-weight: 300;
                                 padding: 6px 12px 5px 32px;
-                                border-radius: 50px;
+                                border-radius: 4px;
                                 box-shadow: none;
                                 margin: 0;
                                 width: 120px;
@@ -587,27 +587,27 @@ font-size: 12px;
 
 //? ###################################### Gallery Page Start ######################################
 [page-name=loginPage] {
-    & .navbar {
-        background-color: transparent;
-        & .navbar-collapse {
-            & .navbar-nav {
-                & .nav-item {
-                    & .nav-link {
-                        color: $dark;
-                        &.active, &:hover {
-                            color: $theme1;
-                            &:after {
-                            }
-                        }
-                    }
-                    &.dropdown{
-                        & .nav-link {
-                        }
-                    }
-                }
-            }
-        }
-    }
+    // & .navbar {
+    //     background-color: transparent;
+    //     & .navbar-collapse {
+    //         & .navbar-nav {
+    //             & .nav-item {
+    //                 & .nav-link {
+    //                     color: $dark;
+    //                     &.active, &:hover {
+    //                         color: $theme1;
+    //                         &:after {
+    //                         }
+    //                     }
+    //                 }
+    //                 &.dropdown{
+    //                     & .nav-link {
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
     & .loginPage {
         min-height: 500px;
         &:before, &:after {
@@ -8031,3 +8031,4 @@ font-size: 12px;
 }
 
 //! ###################################### Product Page End ######################################
+   
